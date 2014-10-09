@@ -308,6 +308,7 @@ public class SeekArc extends View {
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
+		if (!isEnabled()) return false;
 		switch (event.getAction()) {
 		case MotionEvent.ACTION_DOWN:
 			onStartTrackingTouch();
